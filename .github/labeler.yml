@@ -1,2 +1,13 @@
-Ready for review:
-- "**"
+labels:
+  'bugFix':
+    - '\bbug( Fix)?\b'
+  'crashFix':
+    - '\bcrash( Fix)?\b'
+  'hotFix':
+    - '\bhot( Fix)?\b'
+  'feature':
+    - '\bfeature?\b'
+  'enhancement':
+    - '\benhancement\b'
+  'documentation':
+    - '\bdocumentation\b'
