@@ -10,6 +10,7 @@ jobs:
        if: github.event.pull_request.draft == false
        uses: actions/labeler@v2
        with:
+        configuration-path: .github/labelers.yml
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         
      - name: Label working progress
@@ -20,3 +21,10 @@ jobs:
         ready_to_review_label: 'Ready to review'
        env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+     - name: Check Labels
+       id: labeler
+       uses: jimschubert/labeler-action@v2
+       with:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
